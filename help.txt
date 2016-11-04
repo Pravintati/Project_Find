@@ -1,0 +1,62 @@
+ 
+/*****    ./project - search for files in a directory hierarchy    ******/
+
+SYNOPSIS
+		./project [-h] [directory] -[options] [pattern]
+
+DESCRIPTION
+
+       GNU find  searches the  directory  tree  rooted at each given 
+       starting-point by evaluating the given expression from left to right,  
+       according  to  the  rules  of precedence  (see  section  OPERATORS), 
+       until the outcome is known (the left hand side is false for and 
+       operations,  true  for  or),  at  which point  find  moves  on to the 
+       next file name.  If no starting-point is specified, `.' is assumed.
+
+Options 
+	-h :-  It displays the help related to command uses.
+	
+	-name :- It displays the files which matches to the pattern given.
+	
+	-iname :- It displays the files which matches to the pattern given
+			with case insensitively.
+			
+	-type :-  It displays the files or folders as per the type specified 
+			ex '-type f' for file and '-type d' for directory.
+			
+	-size :-  It displays the files which size equal to specified size.
+	
+	-empty :- It displays the empty files from the directory.      
+Examples
+	
+---------------------------------------------------------------------------------
+|	Inputs			|	Outputs					|
+---------------------------------------------------------------------------------
+|	./project		| It displays the current directory structure.	|
+---------------------------------------------------------------------------------
+|	./project /[home]	| It displays the all the directories of home.	|
+---------------------------------------------------------------------------------
+|  ./project ./[folder]    	| It displays the all directories of folder in  | 
+|				|	current direcotry.			|
+---------------------------------------------------------------------------------
+|     ./project -h		| It displays the help related command use.	|
+---------------------------------------------------------------------------------
+|./project [dir] -name [name]	| It displays the files matches the name.	|
+---------------------------------------------------------------------------------
+|./project [dir] -iname [name]	| It displays the files matches the		|
+|				|	name case insensitively.		|
+---------------------------------------------------------------------------------
+|./project [dir] -size [size]	| It displays the files with size specifid.	|
+---------------------------------------------------------------------------------
+|./project [dir] -type f	| It displays the files which matches the name  |
+|	-name [name]		| specified from the directory.			|
+---------------------------------------------------------------------------------
+|./project [dir] -type d	| It displays the direcories which matches the  |
+|	-name [name]		| name specified from the directory.		|
+---------------------------------------------------------------------------------
+|./project [dir] -type f	| It displays the empty files from the		|
+|	-empty			| specified directory.				|
+---------------------------------------------------------------------------------
+|./project [dir] -type f	| It displays the files which matches the size	|
+|	-size [size][k/M]	| from the specified directory.			|
+---------------------------------------------------------------------------------
